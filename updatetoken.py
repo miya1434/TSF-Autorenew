@@ -23,7 +23,6 @@ def getpublickey(Auth,geturl):
     headers={'Accept': 'application/vnd.github.v3+json','Authorization': Auth}
     html = req.get(geturl,headers=headers)
     jsontxt = json.loads(html.text)
-    print(jsontxt)
     if 'key' in jsontxt:
         print("公钥获取成功")
     else:
